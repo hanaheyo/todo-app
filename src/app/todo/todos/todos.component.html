@@ -3,9 +3,8 @@
     <h2>11월 16일</h2>
 </div>
 <div>
-    <div>
-       <input type="checkbox"> 운동하기
-       <input type="checkbox"> 공부하기
+    <div *ngFor="let todo of todos" (click)="toggleTodo(todo)">
+        <input type="checkbox" [checked]="todo.done"> {{ todo.text }}
     </div>
 </div>
 <div>
