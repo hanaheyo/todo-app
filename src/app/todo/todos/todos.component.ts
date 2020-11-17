@@ -23,12 +23,11 @@ export class TodosComponent implements OnInit {
   toggleTodo(todo) {
     todo.done = !todo.done
   }
-  
-  addTodo(newText: string) {
+
+  addTodo(text: string) {
     this.todos.push({
-      done: false, 
-      text: newText
+      done : false,
+      text : text
     });
-    this.newText = '';
   }
 }
